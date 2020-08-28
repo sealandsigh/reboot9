@@ -20,4 +20,4 @@ class Server(models.Model):
     InstanceName = models.CharField("实例名称", max_length=100, db_index=True, help_text="实例名称")
 
 class Ip(models.Model):
-    
+    # q ip

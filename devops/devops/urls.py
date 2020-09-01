@@ -29,5 +29,6 @@ router.registry.extend(user_router.registry)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^', include("resources.urls")),
     url(r'^docs/', include_docs_urls("接口文档"))
 ]

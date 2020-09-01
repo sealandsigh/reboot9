@@ -12,12 +12,18 @@ class Cloud(models.Model):
         return self.code
 
 class Server(models.Model):
-    cloud = models.ForeignKey(Cloud)
-    instanceId = models.CharField("实例ID", max_length=100, db_index=True, help_text="实例ID")
+    cloud        = models.ForeignKey(Cloud)
+    instanceId   = models.CharField("实例ID", max_length=100, db_index=True, help_text="实例ID")
     instanceType = models.CharField("实例类型", max_length=100, help_text="实例类型")
-    cpu = models.CharField("cpu", max_length=32,help_text="cpu")
-    memory = models.CharField("memory", max_length=32,help_text="memory")
-    InstanceName = models.CharField("实例名称", max_length=100, db_index=True, help_text="实例名称")
+    cpu          = models.CharField("cpu", max_length=32,help_text="cpu")
+    memory       = models.CharField("memory", max_length=32,help_text="memory")
+    instanceName = models.CharField("实例名称", max_length=100, db_index=True, help_text="实例名称")
+    createdTime  = models.DateTimeField("创建时间", db_index=True)
+    expiredTime  = models.DateTimeField("到期时间", db_index=True, null=True)
+    hostname     = models.CharField("主机名", max_length=100, db_index=True)
+
 
 class Ip(models.Model):
-    # q ip
+    ip = models.GenericIPAddressField(db_index=True)
+    inner = models.ForeignKey(Server, related_name="innerIpAddress", null=True)
+    public = models.ForeignKey(Server, related_name="publicIpAddress", null=True)

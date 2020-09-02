@@ -17,8 +17,8 @@ def runjob():
 
 class TestView(View):
     def get(self, request, *args, **kwargs):
-        # cvm.getCvmlist()
-        scheduler.add_job(runjob, run_date=datetime.datetime.now(), id="runjob")
+        cvm.getCvmlist()
+        # scheduler.add_job(runjob, run_date=datetime.datetime.now(), id="runjob")
         return HttpResponse("")
 
 class ServerViewset(ReadOnlyModelViewSet):

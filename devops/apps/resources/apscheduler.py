@@ -16,7 +16,7 @@ scheduler.add_jobstore(DjangoJobStore(), "default")
 # def myjob():
 #     print("myjob is run: {}".format(datetime.datetime.now()))
 
-@register_job(scheduler, "interval", seconds=3)
+@register_job(scheduler, "interval", seconds=30)
 def syncQcloud():
     getCvmlist()
 

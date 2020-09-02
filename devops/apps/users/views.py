@@ -6,6 +6,8 @@ from rest_framework import viewsets
 from django.contrib.auth.models import User
 from .serializers import UserSerializer
 from rest_framework.pagination import PageNumberPagination
+from django_filters.rest_framework import DjangoFilterBackend
+from .filters import UserFilter
 
 class UserViewset(viewsets.ModelViewSet):
     """
@@ -22,6 +24,19 @@ class UserViewset(viewsets.ModelViewSet):
         create:
             增加一条user记录
     """
+
     queryset = User.objects.all()
     serializer_class = UserSerializer
     # pagination_class = PageNumberPagination
+    # pagination_class.page_query_param = "p"
+    # pagination_class.page_size_query_param = "page_size"
+
+    # 最基本的搜索，示例，但是我们肯定不用
+    # def get_queryset(self):
+    #     queryset = super(UserViewset, self).get_queryset()
+    #     queryset = queryset.filter(username__icontains=self.request.query_params.get("username"))
+    #     return queryset
+
+    # filter_backends = (DjangoFilterBackend,)
+    filter_class = UserFilter
+    filter_fields = ("username",)

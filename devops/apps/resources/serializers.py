@@ -68,6 +68,8 @@ class ServerSerializer(serializers.Serializer):
 
     def update(self, instance, validated_data):
         instance.cpu = validated_data.get("cpu", "")
+        if validated_data["publicIps"] is None:
+            validated_data["publicIps"] = []
         self.check_inner_ip(instance, validated_data["innerIps"])
         self.check_public_ip(instance, validated_data["publicIps"])
         return instance

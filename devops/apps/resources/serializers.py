@@ -16,11 +16,11 @@ class ServerSerializer(serializers.Serializer):
     cpu          = serializers.CharField(required=True)
     memory       = serializers.CharField(required=True)
     instanceName = serializers.CharField(required=True)
-    createdTime  = serializers.CharField(required=True)
-    expiredTime  = serializers.CharField(required=True, allow_null=True)
+    createdTime  = serializers.DateTimeField(required=True, format="%Y-%m-%d %H:%M:%S")
+    expiredTime  = serializers.DateTimeField(required=True, allow_null=True, format="%Y-%m-%d %H:%M:%S")
     hostname     = serializers.CharField(required=True)
-    publicIps    = serializers.ListField(required=True, allow_null=True)
-    innerIps     = serializers.ListField(required=True)
+    publicIps    = serializers.ListField(required=True, allow_null=True, write_only=True)
+    innerIps     = serializers.ListField(required=True, write_only=True)
 
     class Meta:
         model = Server
@@ -45,11 +45,11 @@ class ServerSerializer(serializers.Serializer):
 
     def getInstance(self, instanceId):
         try:
-            Server.objects.get(instanceId__exact=instanceId)
+            return Server.objects.get(instanceId__exact=instanceId)
         except Server.DoesNotExist:
             return None
         except Exception as e:
-            logger.error("服务器错误: ".format(e.args))
+            logger.error("服务器错误: {}".format(e.args))
             raise serializers.ValidationError("服务器错误")
 
 
@@ -98,3 +98,13 @@ class ServerSerializer(serializers.Serializer):
         not_exists_ip = set(ip_queryset) - set(current_ip_objs)
         for obj in not_exists_ip:
             obj.delete()
+
+    def to_representation(self, instance):
+        ret = super(ServerSerializer, self).to_representation(instance)
+        ret["cloud"] = {
+            "id": instance.cloud.id,
+            "name": instance.cloud.name
+        }
+        ret["publicIps"] = [ip.ip for ip in instance.publicIpAddress.all()]
+        ret["innerIps"] = [ip.ip for ip in instance.innerIpAddress.all()]
+        return ret

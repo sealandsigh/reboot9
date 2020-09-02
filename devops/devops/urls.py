@@ -21,11 +21,14 @@ from rest_framework.documentation import include_docs_urls
 from groupUsers.views import GroupUsersViewset
 from idc.urls import router as idc_router
 from users.router import router as user_router
+from resources.router import router as resources_router
+from resources.apscheduler import scheduler
 
 router = DefaultRouter()
 router.register("groupUsers", GroupUsersViewset, base_name="groupUsers")
 router.registry.extend(idc_router.registry)
 router.registry.extend(user_router.registry)
+router.registry.extend(resources_router.registry)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

@@ -3,11 +3,12 @@
 # DATE:2020/8/25
 
 from rest_framework import viewsets
-from django.contrib.auth.models import User
 from .serializers import UserSerializer
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import UserFilter
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class UserViewset(viewsets.ModelViewSet):
     """

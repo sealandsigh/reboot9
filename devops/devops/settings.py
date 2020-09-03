@@ -29,9 +29,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'users.User'
 # Application definition
 
+# 'idc.apps.IdcConfig'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'idc.apps.IdcConfig',
     'groupUsers',
+    'users',
     'resources',
     'django_apscheduler',
     'django_filters',

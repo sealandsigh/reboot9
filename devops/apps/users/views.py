@@ -39,6 +39,6 @@ class UserViewset(viewsets.ModelViewSet):
     #     return queryset
 
     # filter_backends = (DjangoFilterBackend,)
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated, permissions.DjangoModelPermissions)
     filter_class = UserFilter
     filter_fields = ("username",)

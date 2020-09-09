@@ -22,6 +22,12 @@ class Server(models.Model):
     expiredTime  = models.DateTimeField("到期时间", db_index=True, null=True)
     hostname     = models.CharField("主机名", max_length=100, db_index=True)
 
+    class Meta:
+        permissions = (
+            ("view_server", "can view server"),
+            ("change_server_status", "Can change the status of server"),
+        )
+
 
 class Ip(models.Model):
     ip = models.GenericIPAddressField(db_index=True)

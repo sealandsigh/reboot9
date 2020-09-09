@@ -2,7 +2,7 @@
 # __author__="jiajun.zhu"
 # DATE:2020/8/25
 
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .serializers import UserSerializer
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
@@ -39,5 +39,6 @@ class UserViewset(viewsets.ModelViewSet):
     #     return queryset
 
     # filter_backends = (DjangoFilterBackend,)
+    permission_classes = (permissions.IsAuthenticated,)
     filter_class = UserFilter
     filter_fields = ("username",)

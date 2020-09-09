@@ -33,5 +33,6 @@ router.registry.extend(resources_router.registry)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^', include("resources.urls")),
-    url(r'^docs/', include_docs_urls("接口文档"))
+    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^docs/', include_docs_urls("接口文档")),
 ]

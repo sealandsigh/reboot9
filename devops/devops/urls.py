@@ -30,9 +30,11 @@ router.register("groupUsers", GroupUsersViewset, base_name="groupUsers")
 router.registry.extend(user_router.registry)
 router.registry.extend(resources_router.registry)
 
+from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^', include("resources.urls")),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls("接口文档")),
+    url(r'^api-token-auth/', obtain_auth_token),
 ]

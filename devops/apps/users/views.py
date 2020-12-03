@@ -2,15 +2,19 @@
 # __author__="jiajun.zhu"
 # DATE:2020/8/25
 
-from rest_framework import viewsets, permissions
-from .serializers import UserSerializer
+from rest_framework import viewsets, permissions, mixins
+from .serializers import UserSerializer, UserRegSerializer
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from .filters import UserFilter
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-class UserViewset(viewsets.ModelViewSet):
+class UserViewset(mixins.RetrieveModelMixin,
+                   mixins.UpdateModelMixin,
+                   mixins.DestroyModelMixin,
+                   mixins.ListModelMixin,
+                   viewsets.GenericViewSet):
     """
         retrieve:
             获取指定user记录
@@ -42,3 +46,17 @@ class UserViewset(viewsets.ModelViewSet):
     # permission_classes = (permissions.IsAuthenticated, permissions.DjangoModelPermissions)
     filter_class = UserFilter
     filter_fields = ("username",)
+
+class UserRegViewset(viewsets.GenericViewSet,
+                     mixins.CreateModelMixin,
+                     mixins.UpdateModelMixin):
+    """
+    create:
+        用户注册
+    partial_update:
+        修改密码
+    update:
+        修改密码
+    """
+    queryset = User.objects.all()
+    serializer_class = UserRegSerializer

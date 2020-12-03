@@ -178,6 +178,8 @@ REST_FRAMEWORK = {
 QCLOUD_SECRETID = ""
 QCLOUD_SECRETKEY = ""
 
+DOMAIN= "@zjj.com"
+
 # LOGGING = {
 #     'version': 1,
 #     'disable_existing_loggers': False,

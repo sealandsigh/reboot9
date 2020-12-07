@@ -30,7 +30,7 @@ class UserViewset(mixins.RetrieveModelMixin,
             增加一条user记录
     """
 
-    queryset = User.objects.all()
+    queryset = User.objects.filter(is_superuser=False)
     serializer_class = UserSerializer
     # pagination_class = PageNumberPagination
     # pagination_class.page_query_param = "p"

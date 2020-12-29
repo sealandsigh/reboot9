@@ -12,3 +12,15 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ("id", "name")
+
+
+class UserGroupsSerializer(serializers.Serializer):
+    """
+    group序列化类
+    """
+    id = serializers.ReadOnlyField()
+    name = serializers.ReadOnlyField()
+
+    class Meta:
+        model = Group
+        fields = ("id", "name")

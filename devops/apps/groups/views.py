@@ -52,7 +52,8 @@ class UserGroupViewset(viewsets.GenericViewSet,
 
 
 class GroupMembersViewset(viewsets.GenericViewSet,
-                          mixins.RetrieveModelMixin):
+                          mixins.RetrieveModelMixin,
+                          mixins.DestroyModelMixin):
     """
     角色成员管理
     retrieve:
@@ -72,3 +73,15 @@ class GroupMembersViewset(viewsets.GenericViewSet,
 
         serializer = self.get_serializer(queryset, many=True)
         return response.Response(serializer.data)
+
+    def destroy(self, request, *args, **kwargs):
+        groupObj = self.get_object()
+        userId = request.data.get("uid", 0)
+        ret = {"status": 0}
+        try:
+            userObj = User.objects.get(pk=userId)
+            groupObj.user_set.remove(userObj)
+        except User.DoesNotExist:
+            ret["status"] = 1
+            ret["errmsg"] = "用户错误"
+        return response.Response(ret, status=status.HTTP_200_OK)

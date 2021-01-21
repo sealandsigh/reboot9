@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 from rest_framework import viewsets, mixins, response, status
 from .serializers import GroupSerializer, UserGroupsSerializer
 from .filters import GroupFilter
+from users.serializers import UserSerializer
 
 User = get_user_model()
 
@@ -48,3 +49,26 @@ class UserGroupViewset(viewsets.GenericViewSet,
         groupIds = request.data.get("gids", [])
         userObj.groups = Group.objects.filter(id__in=groupIds)
         return response.Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class GroupMembersViewset(viewsets.GenericViewSet,
+                          mixins.RetrieveModelMixin):
+    """
+    角色成员管理
+    retrieve:
+        获取指定组下的成员列表
+
+    """
+    queryset = Group.objects.all()
+    serializer_class = UserSerializer
+    def retrieve(self, request, *args, **kwargs):
+        groupobj = self.get_object()
+        queryset = groupobj.user_set.all()
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        return response.Response(serializer.data)

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'groups',
     'corsheaders',
     'resources',
+    'permissions',
     'django_apscheduler',
     'django_filters',
 ]

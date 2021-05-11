@@ -22,6 +22,7 @@ from groupUsers.views import GroupUsersViewset
 # from idc.urls import router as idc_router
 from users.router import router as user_router
 from groups.router import group_router
+from permissions.router import permission_router
 from resources.router import router as resources_router
 # from resources.apscheduler import scheduler
 
@@ -31,6 +32,7 @@ router = DefaultRouter()
 router.registry.extend(user_router.registry)
 router.registry.extend(group_router.registry)
 # router.registry.extend(resources_router.registry)
+router.registry.extend(permission_router.registry)
 
 from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [

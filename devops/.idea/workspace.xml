@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="蔚来换mac后的第一次提交">
-      <change afterPath="$PROJECT_DIR$/apps/permissions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/permissions/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/permissions/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/permissions/views.py" afterDir="false" />
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="用户组修改权限完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devops/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devops/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,21 +193,7 @@
       <workItem from="1611930918633" duration="361000" />
       <workItem from="1619577307202" duration="5792000" />
       <workItem from="1620374993278" duration="866000" />
-      <workItem from="1620636868260" duration="2982000" />
-    </task>
-    <task id="LOCAL-00011" summary="练习用户创建接口">
-      <created>1597394286337</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1597394286337</updated>
-    </task>
-    <task id="LOCAL-00012" summary="用户存在捕获500异常">
-      <created>1597396330979</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1597396330979</updated>
+      <workItem from="1620636868260" duration="3249000" />
     </task>
     <task id="LOCAL-00013" summary="日志中途提交">
       <created>1597455788247</created>
@@ -544,7 +524,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611827205229</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="用户组修改权限完成">
+      <created>1620720608890</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1620720608891</updated>
+    </task>
+    <task id="LOCAL-00061" summary="用户组修改权限完成">
+      <created>1620720626562</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1620720626562</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -573,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="版本五完成" />
     <MESSAGE value="版本六完成" />
     <MESSAGE value="版本七完成" />
     <MESSAGE value="groupUser示例 1" />
@@ -598,13 +591,14 @@
     <MESSAGE value="用户组成员列表完成" />
     <MESSAGE value="用户成员移除" />
     <MESSAGE value="蔚来换mac后的第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="蔚来换mac后的第一次提交" />
+    <MESSAGE value="用户组修改权限完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户组修改权限完成" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1620720608615">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1620720626342">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620720608615" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620720626342" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1620716926880">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
@@ -629,6 +623,10 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926879" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1619602234992" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1620720632152">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620720632152" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1620636869347">
       <screen x="0" y="23" width="1440" height="828" />
     </state>

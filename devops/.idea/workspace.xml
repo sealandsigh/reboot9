@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="用户组修改权限完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/permissions/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/permissions/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,14 +194,7 @@
       <workItem from="1611930918633" duration="361000" />
       <workItem from="1619577307202" duration="5792000" />
       <workItem from="1620374993278" duration="866000" />
-      <workItem from="1620636868260" duration="4240000" />
-    </task>
-    <task id="LOCAL-00016" summary="templateview">
-      <created>1597742901244</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1597742901244</updated>
+      <workItem from="1620636868260" duration="4733000" />
     </task>
     <task id="LOCAL-00017" summary="Idc模型的创建">
       <created>1597811909056</created>
@@ -538,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620726409490</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="用户组修改权限完成">
+      <created>1620726770851</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1620726770852</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView">
@@ -595,11 +596,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="用户组修改权限完成" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1620726409315">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1620726770686">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620720880430" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620726409315" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620726770686" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1620716926880">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
@@ -624,11 +625,11 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926879" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1619602234992" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1620726420072">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1620726806373">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620720888088" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620726420072" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620726806373" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1620636869347">
       <screen x="0" y="23" width="1440" height="828" />
     </state>

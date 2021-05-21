@@ -2,7 +2,7 @@
 # __author__="jiajun.zhu"
 # DATE:2020/8/25
 
-from rest_framework import viewsets, permissions, mixins
+from rest_framework import viewsets, permissions, mixins, response
 from .serializers import UserSerializer, UserRegSerializer
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
@@ -60,3 +60,12 @@ class UserRegViewset(viewsets.GenericViewSet,
     """
     queryset = User.objects.all()
     serializer_class = UserRegSerializer
+
+class UserInfoViewset(viewsets.ViewSet):
+    def list(self, request, *args, **kwargs):
+        data = {
+            "username": self.request.user.username,
+            "name": self.request.user.name,
+            "permission": self.request.user.get_all_permissions()
+        }
+        return response.Response(data)

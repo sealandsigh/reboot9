@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="用户组修改权限完成后端项目打卡">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="jwt 设置完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devops/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,14 +201,7 @@
       <workItem from="1621235990501" duration="33000" />
       <workItem from="1621306599542" duration="41000" />
       <workItem from="1621392626036" duration="528000" />
-      <workItem from="1621397331199" duration="4408000" />
-    </task>
-    <task id="LOCAL-00025" summary="drf版本二扩展api">
-      <created>1598002382060</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1598002382060</updated>
+      <workItem from="1621397331199" duration="5493000" />
     </task>
     <task id="LOCAL-00026" summary="drf版本三">
       <created>1598021244733</created>
@@ -545,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621564971101</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="jwt 设置完成">
+      <created>1621567472401</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1621567472401</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +566,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="版本七完成" />
     <MESSAGE value="groupUser示例 1" />
     <MESSAGE value="groupUser示例完成" />
     <MESSAGE value="文档学习和序列化学习" />
@@ -590,47 +590,48 @@
     <MESSAGE value="蔚来换mac后的第一次提交" />
     <MESSAGE value="用户组修改权限完成" />
     <MESSAGE value="用户组修改权限完成后端项目打卡" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户组修改权限完成后端项目打卡" />
+    <MESSAGE value="jwt 设置完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt 设置完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621566367111">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621566367111" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1621564970882">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1621567472209">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621564970882" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621567472209" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1621393879627" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788020875" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1620904250261">
-      <screen x="0" y="23" width="1440" height="829" />
-    </state>
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926880" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250261" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
-    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1620904250260">
-      <screen x="0" y="23" width="1440" height="829" />
-    </state>
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926879" />
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250260" />
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909350" />
-    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1620904250259">
-      <screen x="0" y="23" width="1440" height="829" />
-    </state>
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926878" />
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250259" />
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909347" />
-    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1620904250261">
-      <screen x="0" y="23" width="1440" height="829" />
-    </state>
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926879" />
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250261" />
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1621564978292">
+    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1621568254069">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621564978292" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621568254069" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250261" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
+    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1621568254068">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621568254068" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250260" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909350" />
+    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1621568254067">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621568254067" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250259" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909347" />
+    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1621568254069">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621568254069" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250261" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1621567474093">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621567474093" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1621393882847" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788023671" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1621397331958">
@@ -650,6 +651,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1620636880569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
+    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1621567554743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
   </component>
 </project>

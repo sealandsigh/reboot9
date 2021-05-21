@@ -199,14 +199,7 @@
       <workItem from="1621235990501" duration="33000" />
       <workItem from="1621306599542" duration="41000" />
       <workItem from="1621392626036" duration="528000" />
-      <workItem from="1621397331199" duration="2970000" />
-    </task>
-    <task id="LOCAL-00023" summary="drf版本一">
-      <created>1597982287910</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1597982287910</updated>
+      <workItem from="1621397331199" duration="3300000" />
     </task>
     <task id="LOCAL-00024" summary="drf版本二">
       <created>1598000902611</created>
@@ -544,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621393879916</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="用户组修改权限完成后端项目打卡">
+      <created>1621478364997</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1621478364997</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,10 +592,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="用户组修改权限完成后端项目打卡" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1621393879627">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1621478364640">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621306615984" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621478364640" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1621393879627" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788020875" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1620904250261">
@@ -622,10 +622,10 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1620716926879" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620904250261" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1619578909351" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1621393882847">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1621478366870">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621306618086" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621478366870" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1621393882847" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788023671" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1621397331958">

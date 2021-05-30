@@ -158,7 +158,7 @@ STATIC_URL = '/static/'
 #     'PAGE_SIZE': 10
 # }
 
-# from rest_framework.settings import api_settings
+from rest_framework.settings import api_settings
 # from rest_framework.permissions import AllowAny
 
 REST_FRAMEWORK = {

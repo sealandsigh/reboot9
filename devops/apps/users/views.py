@@ -62,6 +62,9 @@ class UserRegViewset(viewsets.GenericViewSet,
     serializer_class = UserRegSerializer
 
 class UserInfoViewset(viewsets.ViewSet):
+
+    permission_classes = (permissions.IsAuthenticated,)
+
     def list(self, request, *args, **kwargs):
         data = {
             "username": self.request.user.username,

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'permissions',
     'django_apscheduler',
     'django_filters',
+    'books',
 ]
 
 CORS_ORIGIN_WHITELIST = (

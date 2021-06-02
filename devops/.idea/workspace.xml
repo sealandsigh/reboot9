@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="getuserinfo 添加permission_classes 修复添加model权限之后getuserinfo无法正常使用的情况">
-      <change afterPath="$PROJECT_DIR$/apps/books/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/books/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/books/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/books/views.py" afterDir="false" />
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="books项目模型创建完成">
+      <change afterPath="$PROJECT_DIR$/apps/books/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/books/serializers1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/books/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/books/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devops/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devops/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,14 +211,7 @@
       <workItem from="1621841693433" duration="3264000" />
       <workItem from="1622169312087" duration="498000" />
       <workItem from="1622186196516" duration="3038000" />
-      <workItem from="1622537529547" duration="5915000" />
-    </task>
-    <task id="LOCAL-00035" summary="groupUser示例完成">
-      <created>1598336208729</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1598336208729</updated>
+      <workItem from="1622537529547" duration="10524000" />
     </task>
     <task id="LOCAL-00036" summary="文档学习和序列化学习">
       <created>1598344206830</created>
@@ -555,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622385605758</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="books项目模型创建完成">
+      <created>1622554302239</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1622554302239</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="users序列化完成" />
     <MESSAGE value="分页处理" />
     <MESSAGE value="多云模型创建过程中" />
     <MESSAGE value="多云模型同步数据二过程中" />
@@ -600,57 +600,58 @@
     <MESSAGE value="添加JWT过期时间setting设置" />
     <MESSAGE value="添加 DjangoModelPermissions setting配置" />
     <MESSAGE value="getuserinfo 添加permission_classes 修复添加model权限之后getuserinfo无法正常使用的情况" />
-    <option name="LAST_COMMIT_MESSAGE" value="getuserinfo 添加permission_classes 修复添加model权限之后getuserinfo无法正常使用的情况" />
+    <MESSAGE value="books项目模型创建完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="books项目模型创建完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621566367111">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621566367111" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1622385605472">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1622554386220">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622188646526" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1621776349143" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1622554386220" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788020875" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1622385605472" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1622553572070">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1622607101767">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622533628936" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1622553572070" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622191210903" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622023349895" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622602371696" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622607101767" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1622385533810" />
-    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1622553572069">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1622607101766">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622533628935" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1622553572069" />
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622191210902" />
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622023349893" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622602371695" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622607101766" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1622385533808" />
-    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1622553572069">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1622607101765">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622533628934" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1622553572069" />
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622191210901" />
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622023349891" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622602371694" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622607101765" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1622385533807" />
-    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1622553572070">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1622607101766">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622533628935" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1622553572070" />
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622191210903" />
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622023349894" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622602371696" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622607101766" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1622385533809" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1622385608572">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1622554311527">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622188648459" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1621776352112" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1622554311527" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788023671" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1622385608572" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1622537530344">
@@ -658,6 +659,10 @@
     </state>
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622537530344" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1621776335645" />
+    <state x="411" y="53" width="668" height="729" key="find.popup" timestamp="1622603691943">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="411" y="53" width="668" height="729" key="find.popup/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1622603691943" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,6 +675,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1622553410550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
+    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1622607101756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
   </component>
 </project>

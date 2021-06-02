@@ -163,7 +163,7 @@ from rest_framework.settings import api_settings
 # from rest_framework.permissions import AllowAny
 
 REST_FRAMEWORK = {
-'DEFAULT_PAGINATION_CLASS': 'devops.paginations.Pagination',
+    'DEFAULT_PAGINATION_CLASS': 'devops.paginations.Pagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',

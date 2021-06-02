@@ -10,10 +10,11 @@ class PublishFilter(django_filters.FilterSet):
     group 搜索过滤类
     """
     name = django_filters.CharFilter(lookup_expr="icontains")
+    city = django_filters.CharFilter(lookup_expr="icontains")
 
     class Meta:
         model = Publish
-        fields = ["name"]
+        fields = ["name", "city"]
         # 原代码中是元组, 这里用列表貌似也没问题。
         # fields = (name,)
 
@@ -23,10 +24,11 @@ class AuthorFilter(django_filters.FilterSet):
     group 搜索过滤类
     """
     name = django_filters.CharFilter(lookup_expr="icontains")
+    email = django_filters.CharFilter(lookup_expr="icontains")
 
     class Meta:
         model = Author
-        fields = ["name"]
+        fields = ["name", "email"]
         # 原代码中是元组, 这里用列表貌似也没问题。
         # fields = (name,)
 
@@ -36,9 +38,11 @@ class BookFilter(django_filters.FilterSet):
     group 搜索过滤类
     """
     name = django_filters.CharFilter(lookup_expr="icontains")
+    publisher = django_filters.CharFilter(lookup_expr="icontains")
+    authors = django_filters.CharFilter(lookup_expr="icontains")
 
     class Meta:
         model = Book
-        fields = ["name"]
+        fields = ["name", "publisher", "authors"]
         # 原代码中是元组, 这里用列表貌似也没问题。
         # fields = (name,)

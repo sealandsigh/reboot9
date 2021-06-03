@@ -19,7 +19,7 @@ from rest_framework.permissions import IsAuthenticated
 # 引入自定义的模型，序列化，过滤器类
 from .models import Publish, Author, Book
 from .filters import PublishFilter, AuthorFilter, BookFilter
-from .serializers1 import PublishSerializer, AuthorSerializer
+from .serializers import PublishSerializer, AuthorSerializer, BookSerializer
 
 
 class Pagination(PageNumberPagination):
@@ -93,3 +93,36 @@ class AuthorViewSet(viewsets.ModelViewSet):
     filter_class = AuthorFilter
     search_fields = ('name', 'email')
     ordering_fields = ('name',)
+
+
+class BookViewSet(viewsets.ModelViewSet):
+    """
+    list:
+        列出所有图书信息
+    retrieve:
+        某个图书的详细信息
+    create:
+        创建图书
+    update:
+        更新图书
+    delete:
+        删除图书
+    """
+
+    # 用户认证及权限验证(四种用户模式按顺序依次匹配)
+    authentication_classes = (JSONWebTokenAuthentication, TokenAuthentication,
+                              SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated, permissions.DjangoModelPermissions)
+
+    # 查询结果集
+    queryset = Book.objects.all()
+    # 使用序列化
+    serializer_class = BookSerializer
+    # 调用分页类
+    pagination_class = Pagination
+    # 定义过滤器
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
+    # 调用过滤类
+    filter_class = BookFilter
+    search_fields = ('name', 'publisher__name', 'authors__name')
+    ordering_fields = ('publisher_date',)

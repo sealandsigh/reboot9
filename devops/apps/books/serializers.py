@@ -78,7 +78,7 @@ class BookSerializer(serializers.ModelSerializer):
         author_list = validated_data.pop('authors', [])
         instance = self.Meta.model.objects.create(**validated_data)
         # author和book是多对多关系，添加数据时需要单独处理
-        instance.authors.set(author_list)
+        instance.authors.add(author_list)
         return instance
 
     # 源码中已经对单表，一对多，多对多的关系做了处理，此次为了学习调试方便重写
@@ -89,5 +89,5 @@ class BookSerializer(serializers.ModelSerializer):
         self.Meta.model.objects.filter(id=instance.id).update(**validated_data)
         # 多对多添加的两种写法
         # 此处存疑，更新感觉应该是set，创建是add
-        instance.authors.add(*author_list)
+        instance.authors.set(*author_list)
         return instance

@@ -37,9 +37,9 @@ class BookFilter(django_filters.FilterSet):
     """
     group 搜索过滤类
     """
-    name = django_filters.CharFilter(lookup_expr="icontains")
-    publisher = django_filters.CharFilter(lookup_expr="icontains")
-    authors = django_filters.CharFilter(lookup_expr="icontains")
+    name = django_filters.CharFilter(field_name="name", lookup_expr="icontains")
+    publisher = django_filters.CharFilter(field_name="publisher__name", lookup_expr="icontains")
+    authors = django_filters.CharFilter(field_name="authors__name", lookup_expr="icontains")
 
     class Meta:
         model = Book

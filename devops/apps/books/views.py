@@ -19,7 +19,7 @@ from rest_framework.permissions import IsAuthenticated
 # 引入自定义的模型，序列化，过滤器类
 from .models import Publish, Author, Book
 from .filters import PublishFilter, AuthorFilter, BookFilter
-from .serializers import PublishSerializer, AuthorSerializer, BookSerializer
+from .serializers1 import PublishSerializer, AuthorSerializer, BookSerializer
 
 
 class Pagination(PageNumberPagination):

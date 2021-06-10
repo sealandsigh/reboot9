@@ -23,7 +23,7 @@ from .serializers1 import PublishSerializer, AuthorSerializer, BookSerializer
 
 
 class Pagination(PageNumberPagination):
-    page_size = 2
+    page_size = 10
     page_size_query_param = 'page_size'
     page_query_param = 'page'
     max_page_size = 100

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="books项目page_size分页调整为显示10行">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="books项目page_size分页调整为显示10行-签到">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,14 +208,7 @@
       <workItem from="1622537529547" duration="22367000" />
       <workItem from="1622778104844" duration="1540000" />
       <workItem from="1623145570273" duration="1716000" />
-      <workItem from="1623383514810" duration="354000" />
-    </task>
-    <task id="LOCAL-00044" summary="搜索练习完成">
-      <created>1599037457815</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1599037457815</updated>
+      <workItem from="1623383514810" duration="514000" />
     </task>
     <task id="LOCAL-00045" summary="自定义用户模型初步完成">
       <created>1599121358044</created>
@@ -553,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623339300864</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="books项目page_size分页调整为显示10行-签到">
+      <created>1623425962962</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1623425962963</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="drf简单登录权限" />
     <MESSAGE value="drf模型权限以及全局配置" />
     <MESSAGE value="vue功能实现完毕添加了django-cors-header" />
     <MESSAGE value="9day 用户注册和用户修改序列化完成" />
@@ -598,18 +597,19 @@
     <MESSAGE value="books项目fileter练习，多对多关系，field name字段必须添加两个下划线找到精确字段匹配" />
     <MESSAGE value="books项目fileter练习，多对多关系，field name字段必须添加两个下划线找到精确字段匹配-签到" />
     <MESSAGE value="books项目page_size分页调整为显示10行" />
-    <option name="LAST_COMMIT_MESSAGE" value="books项目page_size分页调整为显示10行" />
+    <MESSAGE value="books项目page_size分页调整为显示10行-签到" />
+    <option name="LAST_COMMIT_MESSAGE" value="books项目page_size分页调整为显示10行-签到" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621566367111">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1621566367111" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1623339300628">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1623425962706">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622778252434" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1622989489725" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1623425962706" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788020875" />
     <state x="254" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1623164558801" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712813772" />
@@ -655,11 +655,11 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622715042467" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1623339304215">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1623425965655">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1622778254744" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1622989491954" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1623425965655" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1620788023671" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1623164561513" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712815778" />

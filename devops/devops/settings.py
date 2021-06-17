@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django_apscheduler',
     'django_filters',
     'books',
+    'workorder',
 ]
 
 CORS_ORIGIN_WHITELIST = (

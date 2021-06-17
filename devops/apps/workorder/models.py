@@ -27,8 +27,8 @@ class WorkOrder(models.Model):
     final_processor = models.ForeignKey(User, null=True, blank=True, verbose_name='最终处理人', related_name='final_processor')
     status = models.IntegerField(choices=STATUS, default=0, verbose_name='工单状态')
     result_desc = models.TextField(verbose_name='处理结果', null=True, blank=True)
-    apply_time = models.DateField(auto_now_add=True, verbose_name='申请时间')
-    complete_time = models.DateField(auto_now=True, verbose_name='处理完成时间')
+    apply_time = models.DateTimeField(auto_now_add=True, verbose_name='申请时间')
+    complete_time = models.DateTimeField(auto_now=True, verbose_name='处理完成时间')
 
     def __str__(self):
         return self.title

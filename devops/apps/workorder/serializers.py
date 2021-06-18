@@ -34,7 +34,6 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         type_value = instance.get_type_display()
         status_value = instance.get_status_display()
         ret = super(WorkOrderSerializer, self).to_representation(instance)
-        print(ret)
         ret['type'] = {
             "id": instance.type,
             "name": type_value

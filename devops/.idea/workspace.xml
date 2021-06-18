@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="工单项目后端初步完成，并且修复model中时间字段，原来是datefield有问题，改为datetimefield">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可">
       <change beforePath="$PROJECT_DIR$/apps/workorder/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/workorder/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,14 +212,7 @@
       <workItem from="1623810633680" duration="21000" />
       <workItem from="1623856025651" duration="38000" />
       <workItem from="1623897716766" duration="11051000" />
-      <workItem from="1623998929143" duration="1476000" />
-    </task>
-    <task id="LOCAL-00052" summary="group 环境准备完毕">
-      <created>1607684318386</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1607684318386</updated>
+      <workItem from="1623998929143" duration="1725000" />
     </task>
     <task id="LOCAL-00053" summary="group用户组配合前端功能完成">
       <created>1608623249052</created>
@@ -558,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623922357480</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可">
+      <created>1624006176420</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1624006176420</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9day 用户注册和用户修改序列化完成" />
     <MESSAGE value="user queryset 去掉admin用户" />
     <MESSAGE value="group 环境准备完毕" />
     <MESSAGE value="group用户组配合前端功能完成" />
@@ -603,7 +601,8 @@
     <MESSAGE value="books项目page_size分页调整为显示10行-签到" />
     <MESSAGE value="工单项目模型创建完成" />
     <MESSAGE value="工单项目后端初步完成，并且修复model中时间字段，原来是datefield有问题，改为datetimefield" />
-    <option name="LAST_COMMIT_MESSAGE" value="工单项目后端初步完成，并且修复model中时间字段，原来是datefield有问题，改为datetimefield" />
+    <MESSAGE value="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621566367111">
@@ -614,10 +613,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1623922357302">
+    <state x="175" y="55" key="CommitChangelistDialog2" timestamp="1624006176121">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1623922357302" />
+    <state x="175" y="55" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624006176121" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1623425962706" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724569032" />
     <state x="254" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1623856040483" />
@@ -664,10 +663,10 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622715042467" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1623922359299">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1624006179077">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1623922359299" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624006179077" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1623425965655" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724571088" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1623856043051" />

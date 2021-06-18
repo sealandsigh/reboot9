@@ -34,6 +34,7 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         type_value = instance.get_type_display()
         status_value = instance.get_status_display()
         ret = super(WorkOrderSerializer, self).to_representation(instance)
+        print(ret)
         ret['type'] = {
             "id": instance.type,
             "name": type_value
@@ -45,11 +46,11 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         ret['applicant'] = {
             "id": applicant_obj.id,
             "name": applicant_obj.name
-        }
+        },
         ret['assign_to'] = {
             "id": assign_to_obj.id,
             "name": assign_to_obj.name
-        }
+        },
         if final_processor_obj:
             ret['final_processor'] = {
                 "id": final_processor_obj.id,

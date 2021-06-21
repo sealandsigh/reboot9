@@ -212,14 +212,7 @@
       <workItem from="1623810633680" duration="21000" />
       <workItem from="1623856025651" duration="38000" />
       <workItem from="1623897716766" duration="11051000" />
-      <workItem from="1623998929143" duration="2612000" />
-    </task>
-    <task id="LOCAL-00056" summary="用户成员移除">
-      <created>1611219625028</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1611219625028</updated>
+      <workItem from="1623998929143" duration="2786000" />
     </task>
     <task id="LOCAL-00057" summary="蔚来换mac后的第一次提交">
       <created>1611827186273</created>
@@ -557,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624111860658</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可--------取消ret的print查看">
+      <created>1624195372649</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1624195372649</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,8 +613,8 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1624111860458">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1624195372454">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="175" y="55" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624006228688" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1623425962706" />
@@ -623,6 +623,7 @@
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712813772" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1624111860458" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620872965" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1624195372454" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1623998988940">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
@@ -663,8 +664,8 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622715042467" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1624111862351">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1624195374254">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624006233212" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1623425965655" />
@@ -673,6 +674,7 @@
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712815778" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1624111862351" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620874618" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1624195374254" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1623998930178">
       <screen x="0" y="23" width="1440" height="828" />
     </state>

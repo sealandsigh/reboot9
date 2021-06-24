@@ -66,9 +66,12 @@ class UserInfoViewset(viewsets.ViewSet):
     permission_classes = (permissions.IsAuthenticated,)
 
     def list(self, request, *args, **kwargs):
+        user_obj = self.request.user
+        roles = [role.name for role in user_obj.groups.all()]
         data = {
             "username": self.request.user.username,
             "name": self.request.user.name,
-            "permission": self.request.user.get_all_permissions()
+            "permission": self.request.user.get_all_permissions(),
+            "roles": roles
         }
         return response.Response(data)

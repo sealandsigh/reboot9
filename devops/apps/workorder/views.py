@@ -58,3 +58,7 @@ class WorkOrderViewset(viewsets.ModelViewSet):
     # filter_class = PublishFilter
     search_fields = ('title', 'order_contents')
     ordering_fields = ('id',)
+
+    # def get_queryset(self):
+    #     status = self.request.GET.get('status', None)
+    #     print('status is {}'.format(status))

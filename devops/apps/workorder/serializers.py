@@ -54,6 +54,6 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             ret['final_processor'] = {
                 "id": final_processor_obj.id,
                 "name": final_processor_obj.name
-            }
+            },
 
         return ret

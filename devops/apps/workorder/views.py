@@ -2,7 +2,7 @@
 # __author__="jiajun.zhu"
 # DATE:2021/6/17
 
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, response, status
 # drf自带的分页
 from rest_framework.pagination import PageNumberPagination
 # drf自带的过滤器，提供了SearchFilter,OrderingFilter搜索和排序功能
@@ -84,3 +84,11 @@ class WorkOrderViewset(viewsets.ModelViewSet):
         if "admin" not in role_name:
             queryset = queryset.filter(applicant=applicant)
         return queryset
+
+    def partial_update(self, request, *args, **kwargs):
+        pk = int(kwargs.get("pk"))
+        final_processor = self.request.user
+        data = request.data
+        data["final_processor"] = final_processor
+        WorkOrder.objects.filter(pk=pk).update(**data)
+        return response.Response(status=status.HTTP_204_NO_CONTENT)

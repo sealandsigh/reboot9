@@ -59,6 +59,28 @@ class WorkOrderViewset(viewsets.ModelViewSet):
     search_fields = ('title', 'order_contents')
     ordering_fields = ('id',)
 
-    # def get_queryset(self):
-    #     status = self.request.GET.get('status', None)
-    #     print('status is {}'.format(status))
+    def get_queryset(self):
+        status = self.request.GET.get('status', None)
+        print('status is {}'.format(status))
+        applicant = self.request.user
+        print('applicant is {}'.format(applicant))
+        # 获取当前登录用户所有组的信息
+        role = applicant.groups.all().values('name')
+        # [{‘name’:‘张三’}，{‘name’:‘李四’}，。。。] 可能是这种形式
+        print('role is {}'.format(role))
+        role_name = [r['name'] for r in role]
+        print('role_name is {}'.format(role_name))
+        queryset = super(WorkOrderViewset, self).get_queryset()
+
+        # 判断传来的status值判断是申请列表还是历史列表
+        if status and int(status) == 1:
+            queryset = queryset.filter(status__lte=int(status))
+        elif status and int(status) == 2:
+            queryset = queryset.filter(status__gte=int(status))
+        else:
+            pass
+
+        # 判断登录用户是否是管理员，是则显示所有工单，否则只显示自己的
+        if "admin" not in role_name:
+            queryset = queryset.filter(applicant=applicant)
+        return queryset

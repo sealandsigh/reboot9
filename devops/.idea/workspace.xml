@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="工单添加处理按钮逻辑，并且修改final_processor数据格式">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,14 +216,7 @@
       <workItem from="1624354993099" duration="1601000" />
       <workItem from="1624438200463" duration="7202000" />
       <workItem from="1624537021262" duration="142000" />
-      <workItem from="1624591054364" duration="4988000" />
-    </task>
-    <task id="LOCAL-00062" summary="用户组修改权限完成">
-      <created>1620720871860</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1620720871860</updated>
+      <workItem from="1624591054364" duration="5187000" />
     </task>
     <task id="LOCAL-00063" summary="用户组修改权限完成">
       <created>1620720880607</created>
@@ -561,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624608814890</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到">
+      <created>1624716149311</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1624716149311</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="用户组成员列表完成" />
     <MESSAGE value="用户成员移除" />
     <MESSAGE value="蔚来换mac后的第一次提交" />
     <MESSAGE value="用户组修改权限完成" />
@@ -606,7 +605,8 @@
     <MESSAGE value="userinfo返回添加role相关信息" />
     <MESSAGE value="工单项目后端实现对status状态的判断以及role角色的判断" />
     <MESSAGE value="工单添加处理按钮逻辑，并且修改final_processor数据格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="工单添加处理按钮逻辑，并且修改final_processor数据格式" />
+    <MESSAGE value="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到" />
+    <option name="LAST_COMMIT_MESSAGE" value="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621566367111">
@@ -617,11 +617,11 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="124" y="40" key="CommitChangelistDialog2" timestamp="1624608814549">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1624716149079">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="124" y="40" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624608814549" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1623425962706" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1624716149079" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724569032" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1624284192039" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712813772" />
@@ -668,11 +668,11 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622715042467" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1624608816924">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1624716151244">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1624608816924" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1623425965655" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1624716151244" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724571088" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1624284194394" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1622712815778" />

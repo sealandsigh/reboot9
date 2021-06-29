@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django_filters',
     'books',
     'workorder',
+    'autotask',
 ]
 
 CORS_ORIGIN_WHITELIST = (

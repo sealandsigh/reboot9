@@ -15,6 +15,7 @@ from rest_framework.authentication import TokenAuthentication, BasicAuthenticati
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 # drf自带的权限管理方式
 from rest_framework.permissions import IsAuthenticated
+from datetime import datetime
 
 # 引入自定义的模型，序列化，过滤器类
 from .models import WorkOrder
@@ -90,5 +91,5 @@ class WorkOrderViewset(viewsets.ModelViewSet):
         final_processor = self.request.user
         data = request.data
         data["final_processor"] = final_processor
-        WorkOrder.objects.filter(pk=pk).update(**data)
+        WorkOrder.objects.filter(pk=pk).update(**data, complete_time=datetime.now())
         return response.Response(status=status.HTTP_204_NO_CONTENT)

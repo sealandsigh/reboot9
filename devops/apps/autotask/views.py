@@ -16,6 +16,9 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 # drf自带的权限管理方式
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
+from utils.ansible_api import ANSRunner
+import time
+import json
 
 # 引入自定义的模型，序列化，过滤器类
 from .models import Tasks
@@ -58,3 +61,19 @@ class TasksViewset(viewsets.ModelViewSet):
     # filter_class = PublishFilter
     search_fields = ('name',)
     ordering_fields = ('id',)
+
+    def partial_update(self, request, *args, **kwargs):
+        """
+        执行任务，并将结果入库
+        """
+        pk = int(kwargs.get("pk"))
+        data = request.data
+        print(data)
+        task = Tasks.objects.get(pk=pk)
+        rbt = ANSRunner()
+        print(task.playbook.path)
+        rbt.run_playbook(task.playbook.path)
+        data['detail_result'] = json.dumps(rbt.get_playbook_result(), indent=4)
+        data["exec_time"] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        Tasks.objects.filter(pk=pk).update(**data)
+        return response.Response(status=status.HTTP_204_NO_CONTENT)

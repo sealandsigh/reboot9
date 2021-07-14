@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'books',
     'workorder',
     'autotask',
+    'celery-test',
 ]
 
 CORS_ORIGIN_WHITELIST = (
@@ -195,6 +196,14 @@ QCLOUD_SECRETID = ""
 QCLOUD_SECRETKEY = ""
 
 DOMAIN= "@zjj.com"
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379'
+#: Only add pickle to this list if your broker is secured
+#: from unwanted access (see userguide/security.html)
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_TASK_SERIALIZER = 'json'
 
 # LOGGING = {
 #     'version': 1,

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework_jwt.views import obtain_jwt_token
-# from django.contrib import admin
+from django.contrib import admin
 
 from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls
@@ -48,4 +48,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls("接口文档")),
     url(r'^api-token-auth/', obtain_jwt_token),
+    url(r'^celery/', include("celery-test.urls")),
+    url(r'^admin/', admin.site.urls),
 ]

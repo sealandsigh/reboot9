@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="celery-test项目woker初步完成-签到">
-      <change afterPath="$PROJECT_DIR$/devops/celeryconfig.py" afterDir="false" />
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="新增celeryconfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devops/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,14 +276,7 @@
       <workItem from="1626165717784" duration="6084000" />
       <workItem from="1626358449779" duration="97000" />
       <workItem from="1626404631323" duration="34000" />
-      <workItem from="1626422406371" duration="3558000" />
-    </task>
-    <task id="LOCAL-00084" summary="books项目模型创建完成">
-      <created>1622554302239</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1622554302239</updated>
+      <workItem from="1626422406371" duration="3990000" />
     </task>
     <task id="LOCAL-00085" summary="books项目新构建完成可以展示publish和author界面">
       <created>1622613058848</created>
@@ -623,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626404650621</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="新增celeryconfig">
+      <created>1626515389087</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1626515389088</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 DjangoModelPermissions setting配置" />
     <MESSAGE value="getuserinfo 添加permission_classes 修复添加model权限之后getuserinfo无法正常使用的情况" />
     <MESSAGE value="books项目模型创建完成" />
     <MESSAGE value="books项目新构建完成可以展示publish和author界面" />
@@ -668,7 +665,8 @@
     <MESSAGE value="添加ansible执行任务功能-签到" />
     <MESSAGE value="celery-test项目woker初步完成" />
     <MESSAGE value="celery-test项目woker初步完成-签到" />
-    <option name="LAST_COMMIT_MESSAGE" value="celery-test项目woker初步完成-签到" />
+    <MESSAGE value="新增celeryconfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增celeryconfig" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626165958716">
@@ -679,11 +677,11 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="124" y="40" key="CommitChangelistDialog2" timestamp="1626404650363">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1626515388853">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="124" y="40" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626404650363" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1626358512850" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1626515388853" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724569032" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1625912420530" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625714704526" />
@@ -730,11 +728,11 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625125110699" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1626404652606">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1626515392635">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626404652606" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1626358514908" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1626515392635" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623724571088" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1625912423801" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625714707020" />

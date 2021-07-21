@@ -6,6 +6,7 @@ from django.shortcuts import render, HttpResponse
 from .tasks import add
 
 def index(request):
-    add.delay(1,2)
-    return HttpResponse("This is Ok!")
+    res = add.delay(1,2)
+    print(res)
+    return HttpResponse("This is Ok! {}".format(res))
 

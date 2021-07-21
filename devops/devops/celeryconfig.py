@@ -18,16 +18,19 @@ CELERY_TASK_QUEUES = {
     'beat_tasks': {
         'exchange': 'beat_tasks',
         'exchange_type': 'direct',
-        'binding_key': 'beat_tasks'
+        'routing_key': 'beat_tasks'
     },
     'work_queue': {
         'exchange': 'work_queue',
         'exchange_type': 'direct',
-        'binding_key': 'work_queue'
+        'routing_key': 'work_queue'
     }
 }
 
 CELERY_TASK_DEFAULT_QUEUE = 'work_queue'
+
+# CELERY_TASK_ROUTES = {'celery-test-task-add': {'exchange': 'work_queue', 'exchange_type': 'direct', 'routing_key': 'work_queue'}}
+CELERY_TASK_ROUTES = {'celery-test.tasks.*': {'queue': 'work_queue', 'routing_key': 'work_queue'}}
 
 # 有些情况可以防止死锁,这个参数在4版本后没有，仅记录下
 # CELERYD_FORCE_EXECV = True

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="django-celery-beat调试完成版本需要1.5.0">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="队列调通解决，需要tasks也调用全局的app，否则配置不生效，或者单独在tasks配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/celery-test/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/celery-test/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/celery-test/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/celery-test/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/devops/celeryconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/devops/celeryconfig.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +88,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -280,14 +280,8 @@
       <workItem from="1626358449779" duration="97000" />
       <workItem from="1626404631323" duration="34000" />
       <workItem from="1626422406371" duration="16722000" />
-      <workItem from="1626765301339" duration="15174000" />
-    </task>
-    <task id="LOCAL-00088" summary="books项目book相关功能完成，并且添加serializer和serializer1，serializer作为调试练习项目">
-      <created>1622712813942</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1622712813943</updated>
+      <workItem from="1626765301339" duration="15749000" />
+      <workItem from="1626931820699" duration="1478000" />
     </task>
     <task id="LOCAL-00089" summary="books项目fileter练习，多对多关系，field name字段必须添加两个下划线找到精确字段匹配">
       <created>1622778252719</created>
@@ -625,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626771088882</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="队列调通解决，需要tasks也调用全局的app，否则配置不生效，或者单独在tasks配置">
+      <created>1626863209902</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1626863209902</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +646,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="books项目新构建完成可以展示publish和author界面" />
     <MESSAGE value="books项目模型构建基本完成和线上规划一致" />
     <MESSAGE value="books项目book相关功能完成，并且添加serializer和serializer1，serializer作为调试练习项目" />
     <MESSAGE value="books项目fileter练习，多对多关系，field name字段必须添加两个下划线找到精确字段匹配" />
@@ -670,7 +670,8 @@
     <MESSAGE value="新增celeryconfig" />
     <MESSAGE value="新增celeryconfig-签到" />
     <MESSAGE value="django-celery-beat调试完成版本需要1.5.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="django-celery-beat调试完成版本需要1.5.0" />
+    <MESSAGE value="队列调通解决，需要tasks也调用全局的app，否则配置不生效，或者单独在tasks配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="队列调通解决，需要tasks也调用全局的app，否则配置不生效，或者单独在tasks配置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626763633689">
@@ -681,72 +682,72 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1626771088577">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1626863209659">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="124" y="40" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626765381820" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1626619170161" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626771088577" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626863209659" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1625912420530" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625714704526" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1624111860458" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620872965" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1625060850843" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1626859604983">
+    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1626937378625">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626777178600" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626934354814" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1625148123125" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626859604983" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626937378625" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1624450760658" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625125110700" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1626859604981">
+    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1626937378624">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626777178599" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626934354813" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1625148123124" />
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626859604981" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626937378624" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1624450760657" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625125110699" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1623339254665" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449243" />
-    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1626859604980">
+    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1626937378623">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626777178599" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626934354812" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1625148123124" />
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626859604980" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626937378623" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1624450760656" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625125110698" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1623339254664" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449243" />
-    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1626859604982">
+    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1626937378624">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626777178600" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626934354814" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1625148123124" />
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626859604982" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626937378624" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1624450760657" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625125110699" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1623339254666" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620449244" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1626771091294">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1626863212186">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626665371246" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1626619172199" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626771091294" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1626863212186" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1625912423801" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1625714707020" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1624111862351" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1622620874618" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1625060853597" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1626765302927">
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1626931823633">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626765302927" />
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1626931823633" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1626358450708" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623897717381" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1623856026501" />
@@ -772,7 +773,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/devops$ansible_api_simple.coverage" NAME="ansible_api_simple Coverage Results" MODIFIED="1626165787582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
-    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1626854532290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
+    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1626934337229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
     <SUITE FILE_PATH="coverage/devops$ansible_api.coverage" NAME="ansible_api Coverage Results" MODIFIED="1625126955398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
   </component>
 </project>

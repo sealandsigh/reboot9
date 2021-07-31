@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'autotask',
     'celery-test',
     'django_celery_beat',
+    'esmanager',
 ]
 
 CORS_ORIGIN_WHITELIST = (

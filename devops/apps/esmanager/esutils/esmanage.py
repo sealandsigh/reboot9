@@ -3,7 +3,8 @@
 # DATE:2021/8/10
 
 from datetime import datetime
-import os, django
+import os
+import django
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "devops.settings")
 django.setup()
 from elasticsearch import Elasticsearch
@@ -15,11 +16,15 @@ class EsClusterClass:
     def __init__(self, clustercode):
         esclusterobj = Escluster.objects.get(code__exact=clustercode)
 
+        self.username = esclusterobj.username
+        self.password = esclusterobj.password[:-5]
         self.clustercode = clustercode
         self.clientIp = esclusterobj.clientIp
         self.port = esclusterobj.port
+        self.auth = eval('("{}", "{}")'.format(self.username, self.password))
         self.hosts = '{}:{}'.format(self.clientIp, self.port)
         self.es = Elasticsearch(hosts=self.hosts,
+                   http_auth=self.auth,
                    timeout=120,
                    max_retries=10,
                    retry_on_timeout=True,
@@ -34,7 +39,6 @@ class EsClusterClass:
         for i in indices:
             i = i.get('index')
             index_list.append(i)
-        print(index_list)
         return index_list
 
     def get_all_topic(self):
@@ -47,13 +51,25 @@ class EsClusterClass:
             topicdic["topicname"] = topic.name
             topicdic["saveday"] = topic.saveDay
             topiclist.append(topicdic)
-        print(topiclist)
         return topiclist
 
-    def testtest(self):
+    def delete_index(self):
         index_list = self.get_all_index()
+        topic_list = self.get_all_topic()
         print(index_list)
+        print(topic_list)
 
 
 if __name__ == '__main__':
-    EsClusterClass('d-appsearch-elk').testtest()
+    EsClusterClass('t-me-elk').delete_index()
+    # es = Elasticsearch(hosts='10.139.39.209:9200',
+    #                    http_auth=('elastic', 'tmeelk'),
+    #                    timeout=120,
+    #                    max_retries=10,
+    #                    retry_on_timeout=True,
+    #                    sniff_on_start=True,
+    #                    sniff_on_connection_fail=True,
+    #                    sniffer_timeout=60
+    #                    )
+    # eshealth = es.cat.health(format='json')
+    # print(eshealth)

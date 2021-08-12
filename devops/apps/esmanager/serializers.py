@@ -23,22 +23,22 @@ class IndexmanageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Indexmanage
         fields = "__all__"
-        depth = 1
+        # depth = 1
 
     # 此处加上depth即可，如果不需要展示那么多，可以用下面的序列化方法
-    # def to_escluster_response(self, escluster_queryset):
-    #     ret = []
-    #     for escluster in escluster_queryset:
-    #         ret.append({
-    #             'id': escluster.id,
-    #             'name': escluster.name,
-    #             'code': escluster.code
-    #         })
-    #     return ret
+    def to_escluster_response(self, escluster_queryset):
+        ret = []
+        for escluster in escluster_queryset:
+            ret.append({
+                'id': escluster.id,
+                'name': escluster.name,
+                'code': escluster.code
+            })
+        return ret
 
-    # def to_representation(self, instance):
-    #     # escluster = self.to_escluster_response(instance.cluster.all())
-    #     ret = super(IndexmanageSerializer, self).to_representation(instance)
-    #     # ret["escluster"] = escluster
-    #     return ret
+    def to_representation(self, instance):
+        escluster = self.to_escluster_response(instance.cluster.all())
+        ret = super(IndexmanageSerializer, self).to_representation(instance)
+        ret["escluster"] = escluster
+        return ret
 

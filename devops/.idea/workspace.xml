@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="es管理工具初步完成">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="es管理工具添加用户名密码支持">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/esmanager/esutils/esmanage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/esmanager/esutils/esmanage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/esmanager/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/esmanager/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,8 +244,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.esmanage" />
-        <item itemvalue="Python.tasks" />
         <item itemvalue="Python.qcloud" />
+        <item itemvalue="Python.tasks" />
         <item itemvalue="Python.ansible_api_simple" />
         <item itemvalue="Python.ansible_api" />
       </list>
@@ -313,14 +312,8 @@
       <workItem from="1627540439564" duration="10823000" />
       <workItem from="1627958688913" duration="605000" />
       <workItem from="1628133972200" duration="266000" />
-      <workItem from="1628156909825" duration="19002000" />
-    </task>
-    <task id="LOCAL-00105" summary="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可--------取消ret的print查看">
-      <created>1624195372649</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1624195372649</updated>
+      <workItem from="1628156909825" duration="19436000" />
+      <workItem from="1628754858032" duration="8689000" />
     </task>
     <task id="LOCAL-00106" summary="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可--------取消ret的print查看">
       <created>1624284125492</created>
@@ -658,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628677434844</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="es管理工具添加用户名密码支持">
+      <created>1628747852400</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1628747852400</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可" />
     <MESSAGE value="修复工单项目serializer里对于ret的applicant和assign_to字段从字典改为列表，就是在对象{}后面加上一个逗号即可--------取消ret的print查看" />
     <MESSAGE value="userinfo返回添加role相关信息" />
     <MESSAGE value="工单项目后端实现对status状态的判断以及role角色的判断" />
@@ -703,7 +702,8 @@
     <MESSAGE value="esmanager模型调整增加用户名密码字段-签到" />
     <MESSAGE value="jwt会话保持60分钟" />
     <MESSAGE value="es管理工具初步完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="es管理工具初步完成" />
+    <MESSAGE value="es管理工具添加用户名密码支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="es管理工具添加用户名密码支持" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626763633689">
@@ -714,10 +714,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1628677434636">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="124" y="40" key="CommitChangelistDialog2" timestamp="1628747852104">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="124" y="40" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628133986941" />
+    <state x="124" y="40" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628747852104" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1628517691883" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677434636" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1627704167948" />
@@ -725,50 +725,50 @@
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1627803987330" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627875250293" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1625060850843" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1628743836035">
+    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1628765719386">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628743836035" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628765719386" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1628517672456" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677329378" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1628607840850" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010119025" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1627824103121" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378778" />
-    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1628743836034">
+    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1628765719384">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628743836034" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628765719384" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1628517672455" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677329377" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1628607840849" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010119023" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1627824103120" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378777" />
-    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1628743836033">
+    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1628765719384">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628743836033" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628765719384" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1628517672454" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677329377" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1628607840849" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010119022" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1627824103119" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378777" />
-    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1628743836034">
+    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1628765719385">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628743836034" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628765719385" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1628517672455" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677329378" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1628607840850" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010119024" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1627824103121" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378778" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1628677436949">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1628747854192">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628133989980" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628747854192" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1628517693976" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677436949" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1627704170373" />
@@ -776,10 +776,10 @@
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1627803989323" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627875252883" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1625060853597" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1628156912162">
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1628754858903">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628156912162" />
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628754858903" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1626358450708" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623897717381" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1623856026501" />
@@ -806,8 +806,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/devops$ansible_api_simple.coverage" NAME="ansible_api_simple Coverage Results" MODIFIED="1626165787582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
-    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1628156925203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
-    <SUITE FILE_PATH="coverage/devops$esmanage.coverage" NAME="esmanage Coverage Results" MODIFIED="1628743836026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/esmanager/esutils" />
+    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1628754887120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
+    <SUITE FILE_PATH="coverage/devops$esmanage.coverage" NAME="esmanage Coverage Results" MODIFIED="1628765719374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/esmanager/esutils" />
     <SUITE FILE_PATH="coverage/devops$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1628592050543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/esmanager" />
     <SUITE FILE_PATH="coverage/devops$ansible_api.coverage" NAME="ansible_api Coverage Results" MODIFIED="1625126955398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
   </component>

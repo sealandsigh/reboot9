@@ -5,6 +5,8 @@
 from datetime import datetime
 import os
 import django
+import re
+import datetime
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "devops.settings")
 django.setup()
 from elasticsearch import Elasticsearch
@@ -46,22 +48,61 @@ class EsClusterClass:
             cluster=Escluster.objects.get(code=self.clustercode)
         )
         topiclist = []
-        topicdic = {}
         for topic in topicobj:
-            topicdic["topicname"] = topic.name
-            topicdic["saveday"] = topic.saveDay
+            topicdic = {}
+            topicdic['topicname'] = topic.name
+            topicdic['saveday'] = topic.saveDay
             topiclist.append(topicdic)
         return topiclist
+
+    def date_compare(self, date1, saveday, fmt='%Y.%m.%d'):
+        zero = datetime.datetime.fromtimestamp(0)
+        today = datetime.datetime.now()
+        saveday = int(saveday)
+        offset = datetime.timedelta(days=-saveday)
+        date2 = (today + offset).strftime('%Y.%m.%d')
+
+        try:
+            d1 = datetime.datetime.strptime(str(date1), fmt)
+        except:
+            d1 = zero
+
+        try:
+            d2 = datetime.datetime.strptime(str(date2), fmt)
+        except:
+            d2 = zero
+        return d1 < d2
 
     def delete_index(self):
         index_list = self.get_all_index()
         topic_list = self.get_all_topic()
         print(index_list)
         print(topic_list)
+        for topic in topic_list:
+            # print(topic["saveday"])
+            # print(topic['topicname'])
+            for index in index_list:
+                if index == '.kibana' or index == '' or re.match(re.compile(r'^\.'), index):
+                    continue
+                matchObj = re.match(r'(.*)-(\d{4}.\d{2}.\d{2})', index, re.M | re.I)
+                if matchObj:
+                    if topic['topicname'] == matchObj.group(1) and self.date_compare(
+                            matchObj.group(2), topic["saveday"]):
+                        print(matchObj.groups())
+
+    def delete_test(self, delindex):
+        self.es.indices.delete(delindex)
+
+
 
 
 if __name__ == '__main__':
     EsClusterClass('t-me-elk').delete_index()
+    # EsClusterClass('t-me-elk').get_all_topic()
+
+    # delindex = ['dd-app-mp-chaos-dev-info-2021.07.06', 'dd-mplopa-admin-dev-docker-info-log-2021.07.02']
+    # EsClusterClass('t-me-elk').delete_test(delindex)
+
     # es = Elasticsearch(hosts='10.139.39.209:9200',
     #                    http_auth=('elastic', 'tmeelk'),
     #                    timeout=120,

@@ -22,7 +22,7 @@ class IndexmanageFilter(django_filters.FilterSet):
     """
     group 搜索过滤类
     """
-    cluster = django_filters.CharFilter(lookup_expr="icontains")
+    cluster = django_filters.CharFilter(field_name="cluster__code", lookup_expr="icontains")
     name = django_filters.CharFilter(lookup_expr="icontains")
     saveDay = django_filters.CharFilter(lookup_expr="icontains")
     monitorSt = django_filters.CharFilter(lookup_expr="icontains")

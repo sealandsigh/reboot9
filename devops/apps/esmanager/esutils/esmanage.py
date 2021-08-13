@@ -12,6 +12,7 @@ django.setup()
 from elasticsearch import Elasticsearch
 from esmanager.models import Indexmanage
 from esmanager.models import Escluster
+from esmanager.serializers import IndexmanageSerializer
 
 class EsClusterClass:
 
@@ -20,6 +21,8 @@ class EsClusterClass:
 
         self.username = esclusterobj.username
         self.password = esclusterobj.password[:-5]
+        self.default_save_day = esclusterobj.saveDay
+        self.clusterid = esclusterobj.id
         self.clustercode = clustercode
         self.clientIp = esclusterobj.clientIp
         self.port = esclusterobj.port
@@ -78,6 +81,7 @@ class EsClusterClass:
         topic_list = self.get_all_topic()
         print(index_list)
         print(topic_list)
+        index_del_list = []
         for topic in topic_list:
             # print(topic["saveday"])
             # print(topic['topicname'])
@@ -88,16 +92,51 @@ class EsClusterClass:
                 if matchObj:
                     if topic['topicname'] == matchObj.group(1) and self.date_compare(
                             matchObj.group(2), topic["saveday"]):
-                        print(matchObj.groups())
+                        index_del_list.append(index)
+                        if len(index_del_list) > 19:
+                            print("len big 19")
+                            self.es.indices.delete(index_del_list)
+                            index_del_list = []
+        if len(index_del_list) > 1:
+            print("len big 1 end to delete")
+            print(index_del_list)
+            self.es.indices.delete(index_del_list)
+        else:
+            print("not need to delete")
 
-    def delete_test(self, delindex):
-        self.es.indices.delete(delindex)
-
+    def sync_topic(self):
+        index_list = self.get_all_index()
+        topic_list = self.get_all_topic()
+        topic_name_list = []
+        for topic in topic_list:
+            topic_name_list.append(topic["topicname"])
+        index_tmp_list = []
+        for index in index_list:
+            matchObj = re.match(r'(.*)-(\d{4}.\d{2}.\d{2})', index, re.M | re.I)
+            if matchObj:
+                indexname = matchObj.group(1)
+                index_tmp_list.append(indexname)
+        sync_list = list(set(index_tmp_list))
+        for syncindex in sync_list:
+            syncdict = {}
+            if syncindex in topic_name_list:
+                continue
+            else:
+                syncdict["name"] = syncindex
+                syncdict["saveDay"] = self.default_save_day
+                syncdict["monitorSt"] = 'false'
+                syncdict["cluster"] = [self.clusterid]
+                serializer = IndexmanageSerializer(data=syncdict)
+                if serializer.is_valid():
+                    serializer.save()
+                else:
+                    print(serializer.errors)
 
 
 
 if __name__ == '__main__':
-    EsClusterClass('t-me-elk').delete_index()
+    # EsClusterClass('t-me-elk').delete_index()
+    EsClusterClass('t-me-elk').sync_topic()
     # EsClusterClass('t-me-elk').get_all_topic()
 
     # delindex = ['dd-app-mp-chaos-dev-info-2021.07.06', 'dd-mplopa-admin-dev-docker-info-log-2021.07.02']

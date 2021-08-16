@@ -92,5 +92,5 @@ class IndexmanageViewSet(viewsets.ModelViewSet):
     # 调用过滤类
     filter_class = IndexmanageFilter
     search_fields = ('name', 'cluster', 'saveDay', 'monitorSt')
-    ordering_fields = ('saveDay',)
+    ordering_fields = ('saveDay', 'createTime')
 

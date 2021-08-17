@@ -194,6 +194,30 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
 }
 
+# # LDAP
+# import ldap
+# from django_auth_ldap.config import LDAPSearch
+#
+# AUTHENTICATION_BACKENDS = [
+#     "django_auth_ldap.backend.LDAPBackend",
+#     "django.contrib.auth.backends.ModelBackend",
+# ]
+#
+# AUTH_LDAP_SERVER_URI = ""
+#
+# AUTH_LDAP_BIND_DN = ""
+# AUTH_LDAP_BIND_PASSWORD = ""
+# AUTH_LDAP_USER_SEARCH = LDAPSearch(
+#     "", ldap.SCOPE_SUBTREE, "(sAMAccountName=%(user)s)"
+# )
+# AUTH_LDAP_ALWAYS_UPDATE_USER = True
+# AUTH_LDAP_USER_ATTR_MAP = {
+#     "username": "sAMAccountName",
+#     "name": "cn",
+#     "email": "mail",
+#     "first_name": "displayName"
+# }
+
 QCLOUD_SECRETID = ""
 QCLOUD_SECRETKEY = ""
 

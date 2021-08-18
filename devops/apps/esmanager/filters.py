@@ -48,4 +48,3 @@ class IndexmanageFilter(django_filters.FilterSet):
     class Meta:
         model = Indexmanage
         fields = ["name", "cluster", "saveDay", "monitorSt", "cluster_include", "cluster_exclude"]
-

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="django添加ldap认证-newnew">
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="esmanager的索引管理中 cluster过滤支持同一字段多个值的过滤">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/esmanager/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/esmanager/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/esmanager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/esmanager/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,14 +315,7 @@
       <workItem from="1628156909825" duration="19436000" />
       <workItem from="1628754858032" duration="18249000" />
       <workItem from="1629198612860" duration="2225000" />
-      <workItem from="1629254895013" duration="2870000" />
-    </task>
-    <task id="LOCAL-00110" summary="工单添加处理按钮逻辑，并且修改final_processor数据格式">
-      <created>1624608814889</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1624608814890</updated>
+      <workItem from="1629254895013" duration="3321000" />
     </task>
     <task id="LOCAL-00111" summary="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到">
       <created>1624716149311</created>
@@ -661,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629207266495</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="esmanager的索引管理中 cluster过滤支持同一字段多个值的过滤">
+      <created>1629282062611</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1629282062612</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到" />
     <MESSAGE value="解决工单结束时间不生效问题，通过update加上时间解决，由于时间更新filter不走model修改" />
     <MESSAGE value="任务系统初始化完成" />
     <MESSAGE value="任务系统初始化完成-签到" />
@@ -706,7 +704,8 @@
     <MESSAGE value="es管理工具基本完成" />
     <MESSAGE value="调整esmanager的cluster filter过滤条件" />
     <MESSAGE value="django添加ldap认证-newnew" />
-    <option name="LAST_COMMIT_MESSAGE" value="django添加ldap认证-newnew" />
+    <MESSAGE value="esmanager的索引管理中 cluster过滤支持同一字段多个值的过滤" />
+    <option name="LAST_COMMIT_MESSAGE" value="esmanager的索引管理中 cluster过滤支持同一字段多个值的过滤" />
   </component>
   <component name="WindowStateProjectService">
     <state x="169" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626763633689">
@@ -717,12 +716,12 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1629207266310">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="237" y="55" key="CommitChangelistDialog2" timestamp="1629282062302">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="234" y="38" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628847472043" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1629207266310" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677434636" />
+    <state x="237" y="55" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629282062302" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1627704167948" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010107664" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1627803987330" />
@@ -768,12 +767,12 @@
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010119024" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1627824103121" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378778" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1629207270263">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1629282064903">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628847473682" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1629207270263" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1628677436949" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629282064903" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1627704170373" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1627010109980" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1627803989323" />

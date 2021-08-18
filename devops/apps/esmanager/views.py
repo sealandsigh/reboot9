@@ -91,6 +91,6 @@ class IndexmanageViewSet(viewsets.ModelViewSet):
     filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     # 调用过滤类
     filter_class = IndexmanageFilter
-    search_fields = ('name', 'cluster', 'saveDay', 'monitorSt')
+    search_fields = ('name', 'cluster__code', 'saveDay', 'monitorSt')
     ordering_fields = ('saveDay', 'createTime')
 

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/esmanager/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/esmanager/filters.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,14 +314,9 @@
       <workItem from="1628156909825" duration="19436000" />
       <workItem from="1628754858032" duration="18249000" />
       <workItem from="1629198612860" duration="2225000" />
-      <workItem from="1629254895013" duration="3595000" />
-    </task>
-    <task id="LOCAL-00112" summary="工单添加处理按钮逻辑，并且修改final_processor数据格式-签到">
-      <created>1624799478972</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1624799478972</updated>
+      <workItem from="1629254895013" duration="4151000" />
+      <workItem from="1629344557279" duration="285000" />
+      <workItem from="1629357216498" duration="1026000" />
     </task>
     <task id="LOCAL-00113" summary="解决工单结束时间不生效问题，通过update加上时间解决，由于时间更新filter不走model修改">
       <created>1624946426577</created>
@@ -660,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629282591478</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能">
+      <created>1629282730462</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1629282730463</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,75 +717,76 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="457" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623910227894" />
-    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1629282591256">
+    <state x="189" y="56" key="CommitChangelistDialog2" timestamp="1629282730238">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="234" y="38" key="CommitChangelistDialog2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628847472043" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1629207266310" />
     <state x="237" y="55" key="CommitChangelistDialog2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629282062302" />
     <state x="197" y="56" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1627704167948" />
-    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282591256" />
+    <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282730238" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1627803987330" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627875250293" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1625060850843" />
-    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1629282667890">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom" timestamp="1629430253279">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629255264611" />
+    <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629430253279" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1629208223816" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629280562978" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1628607840850" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282667890" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1627824103121" />
     <state width="792" height="151" key="GridCell.Tab.0.bottom/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378778" />
-    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1629282667889">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="792" height="151" key="GridCell.Tab.0.center" timestamp="1629430253278">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629255264610" />
+    <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629430253278" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1629208223816" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629280562977" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1628607840849" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282667889" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1627824103120" />
     <state width="792" height="151" key="GridCell.Tab.0.center/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378777" />
-    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1629282667888">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="792" height="151" key="GridCell.Tab.0.left" timestamp="1629430253277">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629255264609" />
+    <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629430253277" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1629208223815" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629280562977" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1628607840849" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282667888" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1627824103119" />
     <state width="792" height="151" key="GridCell.Tab.0.left/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378777" />
-    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1629282667890">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state width="792" height="151" key="GridCell.Tab.0.right" timestamp="1629430253279">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629255264610" />
+    <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629430253279" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1629208223816" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629280562978" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1628607840850" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282667890" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1627824103121" />
     <state width="792" height="151" key="GridCell.Tab.0.right/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627894378778" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1629282593493">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1629282732393">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1628847473682" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1629207270263" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1629282064903" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1627704170373" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282593493" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830/1440.-1556.1440.2537@0.23.1440.830" timestamp="1629282732393" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1627803989323" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831/1440.-1556.1440.2537@0.23.1440.831" timestamp="1627875252883" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1625060853597" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1629254897477">
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1629614544448">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629254897477" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1626358450708" />
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/1440.-1556.1440.2537@0.23.1440.828" timestamp="1629357217535" />
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1629614544448" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829/1440.-1556.1440.2537@0.23.1440.829" timestamp="1623897717381" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1623856026501" />
+    <state x="415" y="285" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-1556.1440.2537@0.23.1440.877" timestamp="1629344584821" />
     <state x="411" y="53" width="668" height="729" key="find.popup" timestamp="1627543071487">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
@@ -809,7 +811,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/devops$ansible_api_simple.coverage" NAME="ansible_api_simple Coverage Results" MODIFIED="1626165787582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
     <SUITE FILE_PATH="coverage/devops$esmanage.coverage" NAME="esmanage Coverage Results" MODIFIED="1628845855141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/esmanager/esutils" />
-    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1629280562965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
+    <SUITE FILE_PATH="coverage/devops$qcloud.coverage" NAME="qcloud Coverage Results" MODIFIED="1629357224320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/" />
     <SUITE FILE_PATH="coverage/devops$tasks.coverage" NAME="tasks Coverage Results" MODIFIED="1628592050543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/esmanager" />
     <SUITE FILE_PATH="coverage/devops$ansible_api.coverage" NAME="ansible_api Coverage Results" MODIFIED="1625126955398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/utils" />
   </component>

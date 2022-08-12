@@ -619,13 +619,7 @@
       <workItem from="1659939285237" duration="38000" />
       <workItem from="1660016777391" duration="36000" />
       <workItem from="1660104167275" duration="37000" />
-    </task>
-    <task id="LOCAL-00417" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
-      <created>1656818547256</created>
-      <option name="number" value="00417" />
-      <option name="presentableId" value="LOCAL-00417" />
-      <option name="project" value="LOCAL" />
-      <updated>1656818547256</updated>
+      <workItem from="1660186330495" duration="28000" />
     </task>
     <task id="LOCAL-00418" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
       <created>1656900421074</created>
@@ -963,7 +957,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660104190334</updated>
     </task>
-    <option name="localTasksCounter" value="466" />
+    <task id="LOCAL-00466" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
+      <created>1660186343818</created>
+      <option name="number" value="00466" />
+      <option name="presentableId" value="LOCAL-00466" />
+      <option name="project" value="LOCAL" />
+      <updated>1660186343819</updated>
+    </task>
+    <option name="localTasksCounter" value="467" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1011,10 +1012,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="189" y="55" key="CommitChangelistDialog2" timestamp="1660104189993">
+    <state x="189" y="55" key="CommitChangelistDialog2" timestamp="1660186343295">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827/-1440.-1637.1440.2537@0.23.1440.827" timestamp="1660104189993" />
+    <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827/-1440.-1637.1440.2537@0.23.1440.827" timestamp="1660186343295" />
     <state x="-1668" y="64" key="CommitChangelistDialog2/0.23.1440.827/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1657247843892" />
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1657246037793" />
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1659920106405" />
@@ -1024,10 +1025,10 @@
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1658536779474" />
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1658796973720" />
     <state x="252" y="62" key="CommitChangelistDialog2/0.23.1920.1007@0.23.1920.1007" timestamp="1657158683759" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1660104192864">
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1660186346329">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827/-1440.-1637.1440.2537@0.23.1440.827" timestamp="1660104192864" />
+    <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827/-1440.-1637.1440.2537@0.23.1440.827" timestamp="1660186346329" />
     <state x="-1631" y="247" key="Vcs.Push.Dialog.v2/0.23.1440.827/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1657247845909" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1657246041144" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1659920108460" />
@@ -1037,12 +1038,12 @@
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1658536782556" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1658796976190" />
     <state x="289" y="236" key="Vcs.Push.Dialog.v2/0.23.1920.1007@0.23.1920.1007" timestamp="1657158686210" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1660186331402">
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1660266044072">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.827/-1440.-1637.1440.2537@0.23.1440.827" timestamp="1660186331402" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1657247824174" />
-    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1659920098739" />
+    <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1660266044072" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828/-1440.-1637.1440.2537@0.23.1440.828" timestamp="1659939289914" />
     <state x="415" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1655947232149" />
     <state x="415" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.829/-1440.-1637.1440.2537@0.23.1440.829" timestamp="1658716638692" />

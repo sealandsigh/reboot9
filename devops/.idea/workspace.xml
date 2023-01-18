@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到" />
+    <list default="true" id="00edf364-f8f5-49e6-a05e-b6fe88e94eb5" name="Default" comment="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -784,13 +786,8 @@
       <workItem from="1673662283892" duration="178000" />
       <workItem from="1673745831040" duration="41000" />
       <workItem from="1673830773074" duration="99000" />
-    </task>
-    <task id="LOCAL-00579" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
-      <created>1670005600156</created>
-      <option name="number" value="00579" />
-      <option name="presentableId" value="LOCAL-00579" />
-      <option name="project" value="LOCAL" />
-      <updated>1670005600157</updated>
+      <workItem from="1673919644243" duration="54000" />
+      <workItem from="1674001069814" duration="425000" />
     </task>
     <task id="LOCAL-00580" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
       <created>1670121156884</created>
@@ -1128,7 +1125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673830857206</updated>
     </task>
-    <option name="localTasksCounter" value="628" />
+    <task id="LOCAL-00628" summary="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到">
+      <created>1673919684391</created>
+      <option name="number" value="00628" />
+      <option name="presentableId" value="LOCAL-00628" />
+      <option name="project" value="LOCAL" />
+      <updated>1673919684392</updated>
+    </task>
+    <option name="localTasksCounter" value="629" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1176,8 +1180,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="esmanager的索引管理中 cluster过滤支持完善不仅支持包含，新增排除的功能-签到" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="189" y="55" key="CommitChangelistDialog2" timestamp="1673830856890">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="252" y="62" key="CommitChangelistDialog2" timestamp="1673919684067">
+      <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1673575657151" />
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.827@0.23.1440.827" timestamp="1673830856890" />
@@ -1187,9 +1191,9 @@
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1672805602893" />
     <state x="189" y="55" key="CommitChangelistDialog2/0.23.1440.831/-1920.23.1920.1057@0.23.1440.831" timestamp="1671812632496" />
     <state x="189" y="56" key="CommitChangelistDialog2/0.23.1440.832@0.23.1440.832" timestamp="1666487357383" />
-    <state x="252" y="62" key="CommitChangelistDialog2/0.23.1920.1007@0.23.1920.1007" timestamp="1673745854557" />
-    <state x="217" y="198" key="Vcs.Push.Dialog.v2" timestamp="1673830859493">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="252" y="62" key="CommitChangelistDialog2/0.23.1920.1007@0.23.1920.1007" timestamp="1673919684067" />
+    <state x="289" y="236" key="Vcs.Push.Dialog.v2" timestamp="1673919686104">
+      <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1673575659469" />
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.827@0.23.1440.827" timestamp="1673830859493" />
@@ -1199,8 +1203,8 @@
     <state x="217" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1672805605896" />
     <state x="217" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.831/-1920.23.1920.1057@0.23.1440.831" timestamp="1671812634421" />
     <state x="217" y="199" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1666487359704" />
-    <state x="289" y="236" key="Vcs.Push.Dialog.v2/0.23.1920.1007@0.23.1920.1007" timestamp="1673745858105" />
-    <state x="421" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1673919645196">
+    <state x="289" y="236" key="Vcs.Push.Dialog.v2/0.23.1920.1007@0.23.1920.1007" timestamp="1673919686104" />
+    <state x="421" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1674001491175">
       <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="316" y="292" key="com.intellij.ide.util.TipDialog/0.23.1440.827/-1920.23.1920.1057@0.23.1440.827" timestamp="1673575638664" />
@@ -1212,7 +1216,7 @@
     <state x="415" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.831/-1920.23.1920.1057@0.23.1440.831" timestamp="1671812625086" />
     <state x="415" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.831@0.23.1440.831" timestamp="1666450129614" />
     <state x="415" y="271" key="com.intellij.ide.util.TipDialog/0.23.1440.832@0.23.1440.832" timestamp="1666487191748" />
-    <state x="421" y="351" key="com.intellij.ide.util.TipDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1673919645196" />
+    <state x="421" y="351" key="com.intellij.ide.util.TipDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1674001491175" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
